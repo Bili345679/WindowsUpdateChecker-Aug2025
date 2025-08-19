@@ -23,7 +23,11 @@ Batch script to verify if critical Windows updates from August 2025 (e.g. KB5063
 
 ## 注意事项
 - 建议在运行前备份重要数据
-- 某些系统可能禁用 `wmic` 命令，如遇问题可使用 PowerShell 版本（后续更新）
+- 某些系统可能禁用 `wmic` 命令，运行上面的bat文件可能会提示"wmic 不是内部或外部命令，也不是可运行的程序"，如遇问题可使用 PowerShell 版本
+- ```
+  Get-HotFix | Where-Object {$_.HotFixID -match "KB5063709|KB5063877|KB5063871|KB5063889|KB5063878|KB5063875"}
+```
+- 如果运行上面的PowerShell命令后，没有返回任何内容则说明没有要找的补丁，如果出现了类似表格的结构，在表格中会显示要找的补丁
 - 本工具仅用于检测，不会修改系统或卸载补丁
 
 ## 示例输出 / Sample Output
@@ -67,6 +71,10 @@ Checking for installed Windows updates...
 -----------------------------------------
 Check complete.
 ```
+
+### 卸载后更新历史记录依然存在
+- 卸载后可能会有在更新历史记录依然有已经卸载掉的补丁，但是卸载更新的列表里没有该补丁，推测是更新历史记录作用是记录更新补丁安装事件，但是不会因为补丁被卸载而更新
+- 如果出现这种情况请再次运行bat文件或者readme中提到的powershell代码查看是否依旧可以找到补丁
 
 ## 作者声明
 本脚本由 **Microsoft Copilot** 编写，旨在帮助用户快速识别潜在风险更新，提升系统安全性与稳定性。
