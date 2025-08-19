@@ -26,6 +26,48 @@ Batch script to verify if critical Windows updates from August 2025 (e.g. KB5063
 - 某些系统可能禁用 `wmic` 命令，如遇问题可使用 PowerShell 版本（后续更新）
 - 本工具仅用于检测，不会修改系统或卸载补丁
 
+## 示例输出 / Sample Output
+
+以下是运行 `CheckUpdates.bat.bat` 后的典型输出示例：
+### ✅ 情况一：已安装部分更新
+
+```
+Checking for installed Windows updates...
+-----------------------------------------
+[O] Update KB5063709 is installed.
+[O] Update KB5063878 is installed.
+[X] Update KB5063877 is NOT installed.
+[X] Update KB5063889 is NOT installed.
+-----------------------------------------
+Check complete.
+```
+
+### ❌ 情况二：未安装任何更新
+
+```
+Checking for installed Windows updates...
+-----------------------------------------
+[X] Update KB5063709 is NOT installed.
+[X] Update KB5063878 is NOT installed.
+[X] Update KB5063877 is NOT installed.
+[X] Update KB5063889 is NOT installed.
+-----------------------------------------
+Check complete.
+```
+
+### ✅ 情况三：已安装全部更新
+
+```
+Checking for installed Windows updates...
+-----------------------------------------
+[O] Update KB5063709 is installed.
+[O] Update KB5063878 is installed.
+[O] Update KB5063877 is installed.
+[O] Update KB5063889 is installed.
+-----------------------------------------
+Check complete.
+```
+
 ## 作者声明
 本脚本由 **Microsoft Copilot** 编写，旨在帮助用户快速识别潜在风险更新，提升系统安全性与稳定性。
 
