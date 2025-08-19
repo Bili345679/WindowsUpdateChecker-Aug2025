@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: 定义要检查的更新列表
-set "updates=KB5063709 KB5063877 KB5063871 KB5063889 KB5063878"
+set "updates=KB5063709 KB5063877 KB5063871 KB5063889 KB5063878 KB5063875"
 
 echo Checking for installed Windows updates...
 echo -----------------------------------------
@@ -29,3 +29,4 @@ for %%u in (%updates%) do (
 echo -----------------------------------------
 echo Check complete.
 pause
+
