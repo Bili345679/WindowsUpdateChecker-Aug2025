@@ -13,7 +13,7 @@ Batch script to verify if critical Windows updates from August 2025 (e.g. KB5063
 - 无需安装任何第三方软件
 
 ## 使用方法
-1. 下载并保存脚本文件：`Check_Aug2025_WindowsUpdates.bat`
+1. 下载并保存脚本文件：`CheckUpdates.bat`
 2. 右键点击文件，选择 **“以管理员身份运行”**
 3. 查看命令行窗口中的检查结果
 
@@ -28,7 +28,7 @@ Batch script to verify if critical Windows updates from August 2025 (e.g. KB5063
 
 ## 示例输出 / Sample Output
 
-以下是运行 `CheckUpdates.bat.bat` 后的典型输出示例：
+以下是运行 `CheckUpdates.bat` 后的典型输出示例：
 ### ✅ 情况一：已安装部分更新
 
 ```
@@ -85,7 +85,7 @@ This batch script helps verify whether your Windows system has installed **criti
 - No third-party software required
 
 ## How to Use
-1. Download and save the script: `Check_Aug2025_WindowsUpdates.bat`
+1. Download and save the script: `CheckUpdates.bat`
 2. Right-click the file and select **"Run as administrator"**
 3. View the scan results in the command prompt window
 
