@@ -11,6 +11,7 @@ Batch script to verify if critical Windows updates from August 2025 (e.g. KB5063
 - 支持 Windows 10 和 Windows 11 系统
 - 以管理员身份运行后自动扫描并输出结果
 - 无需安装任何第三方软件
+- 增加检测后卸载功能，由用户[HoongDou](https://github.com/HoongDou)提供
 
 ## 使用方法
 1. 下载并保存脚本文件：`CheckUpdates.bat`
